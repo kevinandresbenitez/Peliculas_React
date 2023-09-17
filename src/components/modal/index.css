@@ -1,0 +1,75 @@
+.DarkScreen{
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    top: 0;
+    position: fixed;
+    background-color: rgba(102, 91, 91, 0.295);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Modal{
+    width: 70%;
+    height: 80%;
+    background-color: white;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+}
+.Modal .Modal__close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.Modal .Modal__close:hover{
+    transform: scale(1.2);
+}
+.Modal .Modal__info{
+    width: calc(60% - 20px);
+    height: calc(100% -20px);
+    overflow-y: auto;
+    font-family: var(--default-font);
+    padding: 10px;
+}
+
+.Modal .Modal__info .Modal__info__title{
+    font-size: 26px;
+}
+
+.Modal .Modal__img__container{
+    width: 40%;
+    height:100%;
+}
+.Modal .Modal__img{
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width:900px){
+    .Modal{
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .Modal .Modal__img__container{
+        width: 100%;
+    }
+    .Modal .Modal__info{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media(max-width:1500px){
+    .Modal{
+        width: 80vw;
+    }
+}

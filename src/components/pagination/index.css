@@ -1,0 +1,24 @@
+.Pagination {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.Pagination__prev , .Pagination__next {
+  background-color: transparent;
+  border: 1px solid #3498db; 
+  color:var(--default-text-color);
+  font-family: var(--default-text-color);
+  font-size: 26px;
+  margin: 50px 5px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.Pagination button:hover {
+  color: white;
+  background-color: rgba(241, 16, 16, 0.774);
+  transform: scale(1.04);
+}
+.Pagination button:active {
+  transform: rotate(10deg);
+}
